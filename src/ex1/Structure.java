@@ -4,7 +4,7 @@ import java.io.File;
 
 public class Structure {
 
-	private static String[] _dirs = {"src", "tests", "README.md"};
+	private static String[] _dirs = {"src", "tests", "ex1/README.md"};
 	private static String[] _files = {"node_info.java", "weighted_graph.java",
 			"weighted_graph_algorithms.java", "WGraph_Algo.java", "WGraph_DS.java"};
 	private static String _log = "";
