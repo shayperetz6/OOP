@@ -32,8 +32,10 @@ public class WGraph_Algo implements weighted_graph_algorithms,Serializable {
             weighted_graph copy_graph = new WGraph_DS();
             for (node_info x : g.getV())// copy all the node to the copy graph
             {
-                WGraph_DS.NodeData copy_node = new WGraph_DS.NodeData(x);
-                copy_graph.addNode(copy_node.getKey());
+                copy_graph.addNode(x.getKey());
+                copy_graph.getNode(x.getKey()).setTag(x.getTag());
+                copy_graph.getNode(x.getKey()).setInfo(x.getInfo());
+
             }
             for (node_info x : g.getV())// coping all the edges
             {
@@ -98,7 +100,7 @@ public class WGraph_Algo implements weighted_graph_algorithms,Serializable {
             // the hashmap routes contains all the routes in the graph
             Stack<node_info> reversePath = new Stack();
             reversePath.add(g.getNode(dest));
-            node_info temp_node = new WGraph_DS.NodeData(g.getNode(dest));
+            node_info temp_node = g.getNode(dest);
             while (temp_node.getKey() != src) {
                 temp_node = routes.get(temp_node.getKey());// now the temp node is the route of temp node
                 reversePath.add(temp_node);

@@ -7,18 +7,19 @@ import java.util.Collection;
 import static org.junit.jupiter.api.Assertions.*;
 
 class WGraph_DSTest {
-/*
+
     @Test
     void getKey(){
         weighted_graph g = new WGraph_DS();
         g.addNode(2);
-        //node_info node=new WGraph_DS.NodeData(2);
         assertEquals(2,g.getNode(2).getKey());
 
     }
     @Test
     void getInfo(){
-        node_info node=new WGraph_DS.NodeData(3);
+        weighted_graph g = new WGraph_DS();
+        g.addNode(2);
+        node_info node=g.getNode(2);
         node.setInfo("hello");
         String str=node.getInfo();
         assertEquals("hello",str);
@@ -205,5 +206,5 @@ class WGraph_DSTest {
         assertEquals(3,graph.getMC());
     }
 
-*/
+
 }
